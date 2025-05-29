@@ -21,7 +21,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ml-12">
             <Link to="/gold" className="text-slate-600 hover:text-yellow-600 transition-colors">Gold</Link>
             <Link to="/silver" className="text-slate-600 hover:text-yellow-600 transition-colors">Silver</Link>
             <Link to="/diamond" className="text-slate-600 hover:text-yellow-600 transition-colors">Diamond</Link>

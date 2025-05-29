@@ -1,9 +1,15 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import GoldPage from "./pages/GoldPage";
+import SilverPage from "./pages/SilverPage";
+import DiamondPage from "./pages/DiamondPage";
+import GemstonesPage from "./pages/GemstonesPage";
+import PlatinumPage from "./pages/PlatinumPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +22,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/gold" element={<GoldPage />} />
+          <Route path="/silver" element={<SilverPage />} />
+          <Route path="/diamond" element={<DiamondPage />} />
+          <Route path="/gemstones" element={<GemstonesPage />} />
+          <Route path="/platinum" element={<PlatinumPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

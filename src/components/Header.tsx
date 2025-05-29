@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import { Search, ShoppingCart, User, Menu, X, Plus } from 'lucide-react';
+import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,21 +13,20 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">💎</span>
             </div>
             <span className="text-xl font-bold text-slate-800">JewelMarket</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Buy</a>
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Gold</a>
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Silver</a>
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Diamond</a>
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Gemstones</a>
-            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Platinum</a>
+            <Link to="/gold" className="text-slate-600 hover:text-yellow-600 transition-colors">Gold</Link>
+            <Link to="/silver" className="text-slate-600 hover:text-yellow-600 transition-colors">Silver</Link>
+            <Link to="/diamond" className="text-slate-600 hover:text-yellow-600 transition-colors">Diamond</Link>
+            <Link to="/gemstones" className="text-slate-600 hover:text-yellow-600 transition-colors">Gemstones</Link>
+            <Link to="/platinum" className="text-slate-600 hover:text-yellow-600 transition-colors">Platinum</Link>
           </nav>
 
           {/* Search Bar */}
@@ -42,10 +42,6 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:flex bg-yellow-500 hover:bg-yellow-600 text-white">
-              <Plus className="w-4 h-4 mr-2" />
-              Sell Jewelry
-            </Button>
             <Button variant="ghost" size="sm" className="hidden md:flex">
               <User className="w-4 h-4 mr-2" />
               Sign In
@@ -81,17 +77,12 @@ const Header = () => {
                 />
               </div>
               <nav className="flex flex-col space-y-2">
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Buy</a>
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Gold</a>
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Silver</a>
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Diamond</a>
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Gemstones</a>
-                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Platinum</a>
+                <Link to="/gold" className="text-slate-600 hover:text-yellow-600 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Gold</Link>
+                <Link to="/silver" className="text-slate-600 hover:text-yellow-600 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Silver</Link>
+                <Link to="/diamond" className="text-slate-600 hover:text-yellow-600 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Diamond</Link>
+                <Link to="/gemstones" className="text-slate-600 hover:text-yellow-600 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Gemstones</Link>
+                <Link to="/platinum" className="text-slate-600 hover:text-yellow-600 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Platinum</Link>
               </nav>
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                <Plus className="w-4 h-4 mr-2" />
-                Sell Your Jewelry
-              </Button>
               <Button variant="outline">
                 <User className="w-4 h-4 mr-2" />
                 Sign In

@@ -17,7 +17,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">💎</span>
             </div>
-            <span className="text-xl font-bold text-slate-800">JewelMarket</span>
+            <span className="text-xl font-bold text-slate-800">GBI</span>
           </Link>
 
           {/* Desktop Navigation */}

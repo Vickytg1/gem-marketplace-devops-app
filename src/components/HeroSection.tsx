@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Plus, Shield, Truck, RotateCcw } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -34,11 +35,13 @@ const HeroSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg">
-              <Search className="w-5 h-5 mr-2" />
-              Browse Jewelry
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-8 py-4 text-lg">
+            <Link to="/gold">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg w-full sm:w-auto">
+                <Search className="w-5 h-5 mr-2" />
+                Browse Jewelry
+              </Button>
+            </Link>
+            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-8 py-4 text-lg w-full sm:w-auto">
               <Plus className="w-5 h-5 mr-2" />
               Sell Your Jewelry
             </Button>

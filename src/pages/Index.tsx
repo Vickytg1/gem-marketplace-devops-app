@@ -77,7 +77,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Why Sell on JewelMarket?
+              Why Sell on GBI?
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Turn your jewelry into cash with India's most trusted marketplace
@@ -108,7 +108,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Why Choose JewelMarket?
+              Why Choose GBI?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">

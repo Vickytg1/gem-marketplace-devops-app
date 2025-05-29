@@ -1,6 +1,8 @@
 
 import React from 'react';
 import ProductCard from './ProductCard';
+import { Button } from '@/components/ui/button';
+import { Plus } from 'lucide-react';
 
 const FeaturedProducts = () => {
   const products = [
@@ -81,10 +83,10 @@ const FeaturedProducts = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Featured Collections
+            Featured Marketplace
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Handpicked premium jewelry pieces from verified sellers across India
+            Discover amazing jewelry from trusted sellers or start selling your own pieces today
           </p>
         </div>
 
@@ -94,10 +96,14 @@ const FeaturedProducts = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3">
             View All Products
-          </button>
+          </Button>
+          <Button variant="outline" className="border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-8 py-3">
+            <Plus className="w-4 h-4 mr-2" />
+            Start Selling
+          </Button>
         </div>
       </div>
     </section>

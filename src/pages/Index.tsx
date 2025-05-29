@@ -10,35 +10,35 @@ const Index = () => {
   const categories = [
     {
       title: 'Gold Jewelry',
-      description: 'Exquisite gold pieces from vintage classics to modern designs',
+      description: 'Buy and sell exquisite gold pieces from vintage classics to modern designs',
       image: '🏆',
       itemCount: 2500,
       gradient: 'from-yellow-400 to-yellow-600'
     },
     {
       title: 'Silver Jewelry',
-      description: 'Sterling silver and contemporary silver jewelry collections',
+      description: 'Discover sterling silver and contemporary silver jewelry collections',
       image: '✨',
       itemCount: 1800,
       gradient: 'from-gray-400 to-gray-600'
     },
     {
       title: 'Diamond Jewelry',
-      description: 'Certified diamonds and stunning diamond-studded pieces',
+      description: 'Trade certified diamonds and stunning diamond-studded pieces',
       image: '💎',
       itemCount: 950,
       gradient: 'from-blue-400 to-blue-600'
     },
     {
       title: 'Gemstones',
-      description: 'Precious and semi-precious gemstone jewelry',
+      description: 'Buy and sell precious and semi-precious gemstone jewelry',
       image: '🌈',
       itemCount: 1200,
       gradient: 'from-purple-400 to-purple-600'
     },
     {
       title: 'Platinum Jewelry',
-      description: 'Rare and elegant platinum pieces for special occasions',
+      description: 'Rare and elegant platinum pieces for collectors and sellers',
       image: '🤍',
       itemCount: 650,
       gradient: 'from-slate-400 to-slate-600'
@@ -55,10 +55,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Shop by Category
+              Buy & Sell by Category
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Discover our curated collections of authentic pre-owned luxury jewelry
+              Explore our marketplace of authentic pre-owned luxury jewelry or list your own treasures
             </p>
           </div>
 
@@ -71,6 +71,37 @@ const Index = () => {
       </section>
 
       <FeaturedProducts />
+
+      {/* Seller Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              Why Sell on JewelMarket?
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Turn your jewelry into cash with India's most trusted marketplace
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Best Market Prices</h3>
+              <p className="text-slate-600">Get competitive prices for your jewelry with our transparent pricing</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Easy Listing Process</h3>
+              <p className="text-slate-600">List your jewelry in minutes with our simple upload process</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Trusted Community</h3>
+              <p className="text-slate-600">Connect with verified buyers and sellers across India</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Trust Section */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-yellow-900">

@@ -1,71 +1,66 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Search, Plus, Shield, Truck, RotateCcw } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-yellow-900 min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-20 h-20 border border-yellow-400 rounded-full animate-pulse" />
-        <div className="absolute top-32 right-20 w-16 h-16 border border-yellow-400 rounded-full animate-pulse delay-1000" />
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 border border-yellow-400 rounded-full animate-pulse delay-2000" />
-        <div className="absolute bottom-32 right-1/3 w-24 h-24 border border-yellow-400 rounded-full animate-pulse delay-500" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="bg-gradient-to-br from-slate-50 via-yellow-50 to-slate-50 py-20">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
-            <Sparkles className="w-4 h-4 text-yellow-400" />
-            <span className="text-yellow-400 text-sm font-medium">Premium Second-Hand Jewelry Marketplace</span>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Discover
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600"> Timeless </span>
-            Elegance
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+            Buy & Sell
+            <span className="text-yellow-600 block">Pre-Owned Jewelry</span>
           </h1>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Buy and sell authenticated pre-owned luxury jewelry. From vintage gold to modern diamonds, 
-            find your perfect piece at unbeatable prices.
+          <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+            India's trusted marketplace for authentic pre-owned luxury jewelry. 
+            Discover rare pieces or turn your treasures into cash.
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">10K+</div>
-              <div className="text-slate-400">Verified Items</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">5K+</div>
-              <div className="text-slate-400">Happy Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">99%</div>
-              <div className="text-slate-400">Authenticity Rate</div>
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Input 
+                placeholder="Search for gold, diamond, silver jewelry..." 
+                className="pl-12 pr-4 py-4 text-lg border-2 border-slate-200 focus:border-yellow-500 rounded-xl"
+              />
+              <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-yellow-500 hover:bg-yellow-600 text-white px-6">
+                Search
+              </Button>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg">
-              Shop Now
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <Search className="w-5 h-5 mr-2" />
+              Browse Jewelry
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg">
+            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-50 px-8 py-4 text-lg">
+              <Plus className="w-5 h-5 mr-2" />
               Sell Your Jewelry
             </Button>
           </div>
+
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="flex items-center justify-center space-x-3 text-slate-600">
+              <Shield className="w-6 h-6 text-yellow-500" />
+              <span className="font-medium">100% Authenticated</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3 text-slate-600">
+              <Truck className="w-6 h-6 text-yellow-500" />
+              <span className="font-medium">Free Secure Shipping</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3 text-slate-600">
+              <RotateCcw className="w-6 h-6 text-yellow-500" />
+              <span className="font-medium">30-Day Returns</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 };

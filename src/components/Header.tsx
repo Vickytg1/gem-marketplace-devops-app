@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
+import { Search, ShoppingCart, User, Menu, X, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -21,6 +21,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Buy</a>
             <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Gold</a>
             <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Silver</a>
             <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors">Diamond</a>
@@ -41,6 +42,10 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
+            <Button className="hidden md:flex bg-yellow-500 hover:bg-yellow-600 text-white">
+              <Plus className="w-4 h-4 mr-2" />
+              Sell Jewelry
+            </Button>
             <Button variant="ghost" size="sm" className="hidden md:flex">
               <User className="w-4 h-4 mr-2" />
               Sign In
@@ -76,6 +81,7 @@ const Header = () => {
                 />
               </div>
               <nav className="flex flex-col space-y-2">
+                <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Buy</a>
                 <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Gold</a>
                 <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Silver</a>
                 <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Diamond</a>
@@ -83,6 +89,10 @@ const Header = () => {
                 <a href="#" className="text-slate-600 hover:text-yellow-600 transition-colors py-2">Platinum</a>
               </nav>
               <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                <Plus className="w-4 h-4 mr-2" />
+                Sell Your Jewelry
+              </Button>
+              <Button variant="outline">
                 <User className="w-4 h-4 mr-2" />
                 Sign In
               </Button>

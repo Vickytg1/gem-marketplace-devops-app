@@ -32,4 +32,22 @@ jobs:
           docker push vickytg1/gbi:latest
         env:
           DOCKER_CLI_ACI: 1
+
+      - name: Image scan
+        run: trivy image vickytg1/gbi:latest
+
+  deploy:
+   needs: build-analyze-scan
+   runs-on: [self-hosted]
+   steps:
+      - name: docker pull image
+        run: docker pull vickytg1/gbi:latest
+      - name: Image scan
+        run: trivy image vickytg1/gbi:latest > trivyimagedeploy.txt
+      - name: Deploy to container
+        run: docker run -d --name game -p 80:80 vickytg1/gbi:latest
+      - name: Update kubeconfig
+        run: aws eks --region ap-south-1 update-kubeconfig --name EKS_CLOUD
+      - name: Deploy to kubernetes
+        run: kubectl apply -f deployment-service.yml
           

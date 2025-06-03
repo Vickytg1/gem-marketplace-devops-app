@@ -27,7 +27,7 @@ jobs:
       - name: Docker Build and push
         run: |
           docker build -t gbi .
-          docker tag GBI vickytg1/gbi:latest
+          docker tag gbi vickytg1/gbi:latest
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push vickytg1/gbi:latest
         env:
